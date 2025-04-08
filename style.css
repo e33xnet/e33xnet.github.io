@@ -1,94 +1,42 @@
-/* Загальний стиль для тіла */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Чорний фон */
-    color: #fff; /* Білий текст */
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+}
+
+.login-container {
     text-align: center;
-    overflow: hidden; /* Вимикає скрол */
-}
-
-/* Стиль для контенту */
-.content {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Прозорий чорний фон */
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Легке світле підсвічування */
-    width: 90%;
-    max-width: 600px;
-}
-
-/* Стиль для першого змінного тексту */
-#changingText {
-    font-size: 2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #ff4d4d; /* Червоний текст */
-    margin-bottom: 20px;
-}
-
-/* Стиль для другого змінного тексту */
-#changingText2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #66ccff; /* Блакитний текст */
-    margin-bottom: 30px;
-}
-
-/* Стиль для зображення */
-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    margin-top: 20px;
-}
-
-/* Анімація для зміни тексту */
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* Стиль для фонового анімаційного ефекту */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://your-image-url.com'); /* Можеш додати фон у вигляді картинки */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.1;
-    animation: fadeInOut 5s infinite;
-}
-
-/* Зміна стилю для елементів на екрані */
-button {
     background-color: #333;
-    border: 1px solid #666;
-    color: #fff;
-    padding: 10px 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+input {
+    margin: 10px;
+    padding: 15px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+}
+
+button {
+    margin: 10px;
+    padding: 15px;
+    background-color: #555;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #555;
-    }
+    background-color: #777;
+}
