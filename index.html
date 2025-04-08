@@ -11,31 +11,40 @@
       color: white;
       font-family: "Courier New", Courier, monospace;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
       height: 100vh;
       text-align: left;
-      padding: 10px;
+      padding-left: 20px;
     }
     .error {
-      font-size: 60px;
+      font-size: 100px;
       line-height: 1;
       margin: 0;
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 40%;
+      left: 5%;
+    }
+    .code {
+      font-size: 30px;
+      margin-top: 10px;
+      position: absolute;
+      top: 48%;
+      left: 5%;
     }
     .message {
       font-size: 20px;
+      margin-top: 10px;
       color: #ccc;
       position: absolute;
-      top: 40px;
-      left: 10px;
+      top: 55%;
+      left: 5%;
     }
   </style>
 </head>
 <body>
   <div class="error">:(</div>
-  <div class="message">Сайт недоступний або призначений для інших.</div>
+  <div class="code">ERROR 0xC000021A</div>
+  <div class="message">Your system has encountered an error. The system is unavailable or intended for others.</div>
 </body>
 </html>
