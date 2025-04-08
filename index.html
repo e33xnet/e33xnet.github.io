@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Protected Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1>
-        <form id="loginForm">
-            <input type="text" id="username" placeholder="Username" required><br>
-            <input type="password" id="password" placeholder="Password" required><br>
-            <button type="button" onclick="attemptLogin()">Login</button>
-        </form>
-        <p id="statusMessage" style="color: red;"></p>
+        <h2>Please Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button id="loginBtn">Login</button>
     </div>
-
-    <script src="script.js"></script>
+    <div class="hidden-content" id="hiddenContent">
+        <img src="YOUR_IMAGE_URL" alt="Profile" />
+        <p class="username">splyachyj</p>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
