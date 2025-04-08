@@ -1,52 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>System Error</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: black;
-      color: white;
-      font-family: "Courier New", Courier, monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
-      text-align: center;
-      padding-top: 50px;
-    }
-    .error {
-      font-size: 100px;
-      line-height: 1;
-      margin: 0;
-      font-weight: bold;
-    }
-    .code {
-      font-size: 40px;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-    .message {
-      font-size: 20px;
-      margin-top: 30px;
-      color: #ccc;
-    }
-    .container {
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-      padding: 0 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <div class="error">:(</div>
-    <div class="code">              </div>
-    <div class="message">Your system has encountered an error. The system is unavailable or intended for others.</div>
-  </div>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="button" onclick="attemptLogin()">Login</button>
+        </form>
+        <p id="statusMessage" style="color: red;"></p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
