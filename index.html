@@ -3,33 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unavailable</title>
+  <title>Error</title>
   <style>
-    body {
+    * {
       margin: 0;
-      background-color: black;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #1c1c1c;
       color: white;
-      font-family: sans-serif;
+      font-family: Consolas, monospace;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
       text-align: center;
     }
-    .sad {
-      font-size: 120px;
-      line-height: 1;
+    .error {
+      font-size: 100px;
+      font-weight: bold;
+      margin: 20px;
     }
     .message {
-      font-size: 20px;
+      font-size: 24px;
       margin-top: 20px;
       color: #ccc;
+    }
+    .footer {
+      font-size: 14px;
+      color: #777;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="sad">:(</div>
+  <div class="error">:(</div>
   <div class="message">This site is unavailable or intended for others.</div>
+  <div class="footer">Windows Error 404: File Not Found</div>
 </body>
 </html>
