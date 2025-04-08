@@ -1,0 +1,60 @@
+/* Загальні стилі */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 20px;
+}
+
+/* Контейнер для входу */
+.login-container {
+    margin-top: 100px;
+}
+
+/* Стилі для полів вводу */
+.input-field {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+
+/* Стиль кнопки */
+.button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Стиль для повідомлення про помилку */
+.error-msg {
+    color: red;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Контейнер для музики */
+.music-container {
+    margin-top: 50px;
+}
