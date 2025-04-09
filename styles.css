@@ -19,7 +19,7 @@ body {
 /* Стиль для форми входу */
 #loginForm {
     padding: 30px;
-    background-color: #222; /* Тепер вікно темніше, не сіре */
+    background-color: #9011; /* Тепер вікно темніше, не сіре */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -120,4 +120,4 @@ button:hover {
     audio, video {
         width: 100%;
     }
-}
+    }
