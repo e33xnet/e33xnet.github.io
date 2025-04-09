@@ -1,7 +1,3 @@
-document.getElementById('videoButton').addEventListener('click', function() {
-    document.getElementById('videoUploadBtn').click(); // Відкриває діалог для вибору відео
-});
-
 document.getElementById('videoUploadBtn').addEventListener('change', function(event) {
     const file = event.target.files[0];
     const videoPlayer = document.getElementById('videoPlayer');
