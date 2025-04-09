@@ -1,82 +1,54 @@
-/* Загальні стилі */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
 body {
-    background-color: black;
-    color: white;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Контейнер для входу */
 .login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background-color: black;
+  border: 1px solid white;
+  padding: 30px;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
 }
 
-/* Заголовок */
-h1 {
-    font-size: 2.5em;
-    margin: 40px;
-    letter-spacing: 2px;
-    font-weight: bold;
+.login-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
 }
 
-/* Стилі для полів вводу */
-.input-field {
-    background-color: #333;
-    border: 1px solid #444;
-    color: white;
-    font-size: 1.4em;
-    padding: 12px 20px;
-    margin: 15px;
-    width: 100%;
-    max-width: 300px; /* обмежує ширину для великих екранів */
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background: black;
+  border: 1px solid white;
+  color: white;
+  outline: none;
 }
 
-.input-field:focus {
-    border-color: white;
-    outline: none;
+.login-container button {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
 }
 
-/* Стиль кнопки */
-.button {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    font-size: 1.4em;
-    padding: 12px 30px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.button:active {
-    background-color: rgba(255, 255, 255, 0.4);
-    transform: scale(0.98);
-}
-
-/* Стиль для повідомлення про помилку */
-.error-msg {
-    color: red;
-    font-size: 1.1em;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-/* Контейнер для музики */
-.music-container {
-    margin-top: 60px;
+#error-msg {
+  display: none;
+  color: red;
+  margin-top: 10px;
 }
