@@ -7,13 +7,13 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Зміщуємо вікно трохи вище */
-    height: 100vh; /* Повна висота екрану */
+    align-items: flex-start;
+    height: 100vh;
 }
 
 .container {
     text-align: center;
-    padding-top: 50px; /* Відступ від верху екрану */
+    padding-top: 50px;
 }
 
 /* Стиль для форми входу */
@@ -23,9 +23,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     width: 100%;
-    max-width: 400px; /* Максимальна ширина форми */
+    max-width: 400px;
     margin: auto;
-    border: 2px solid #555; /* Додаємо рамку */
+    border: 2px solid #555;
 }
 
 h1 {
@@ -49,19 +49,19 @@ button {
     background-color: #666;
     color: white;
     border: none;
-    padding: 12px 20px;
-    font-size: 18px;
+    padding: 20px 40px; /* Збільшена кнопка */
+    font-size: 20px; /* Збільшений розмір шрифту */
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-    width: 100%; /* Кнопка на всю ширину */
+    width: 100%;
 }
 
 button:hover {
     background-color: #888;
 }
 
-/* Стилі для секції медіа */
+/* Стилі для медіа секції */
 .media-section {
     margin-top: 20px;
     display: flex;
@@ -71,27 +71,26 @@ button:hover {
 }
 
 .hex-button {
-    background-color: #333;
+    background-color: black;
     color: white;
-    border: none;
-    padding: 20px 40px; /* Прямокутні кнопки */
+    border: 2px solid white;
+    padding: 20px;
     cursor: pointer;
     font-size: 20px;
     border-radius: 10px;
     transition: background-color 0.3s;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hex-button:hover {
     background-color: #555;
 }
 
-audio, video {
-    margin-top: 10px;
-    width: 80%;
-    max-width: 600px;
-}
-
-/* Мобільні стилі */
+/* Медіа стилі */
 @media screen and (max-width: 600px) {
     body {
         padding: 10px;
@@ -102,16 +101,16 @@ audio, video {
     }
 
     input[type="text"], input[type="password"], button {
-        width: 100%; /* Зробити інпути та кнопку ширшими на мобільних */
+        width: 100%;
         padding: 15px;
     }
 
     .hex-button {
-        padding: 15px 30px;
+        padding: 10px;
         font-size: 18px;
     }
 
     audio, video {
-        width: 100%; /* Зробити програвачі ширшими на мобільних */
+        width: 100%;
     }
-}
+    }
