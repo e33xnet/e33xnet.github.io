@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+.login-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"] {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px 0;
+    width: 250px;
+    font-size: 1.2em;
+}
+
+button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.audio-section {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.video-section {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
