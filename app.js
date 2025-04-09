@@ -1,12 +1,13 @@
 document.getElementById('loginBtn').addEventListener('click', function() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('errorMessage');
 
     if (username === 'u5erdv' && password === 'xnet.33:(') {
         document.getElementById('loginForm').style.display = 'none'; // Приховуємо форму входу
         document.getElementById('mediaSection').style.display = 'block'; // Показуємо медіа секцію
     } else {
-        alert('Login failed');
+        errorMessage.textContent = "Login failed"; // Показуємо повідомлення про помилку
     }
 });
 
