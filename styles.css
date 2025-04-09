@@ -1,12 +1,29 @@
+/* Стиль для всього сайту */
 body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Повна висота екрану */
 }
 
 .container {
     text-align: center;
-    margin-top: 50px;
+}
+
+/* Стиль для форми входу */
+#loginForm {
+    padding: 30px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 400px; /* Максимальна ширина форми */
+    margin: auto;
 }
 
 h1 {
@@ -14,21 +31,12 @@ h1 {
     margin-bottom: 50px;
 }
 
-/* Стиль для форми входу */
-#loginForm {
-    display: inline-block;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-}
-
 input[type="text"], input[type="password"] {
     background-color: #444;
     color: white;
     border: 1px solid #555;
     padding: 10px;
-    width: 250px;
+    width: 100%;
     margin: 10px 0;
     border-radius: 5px;
     font-size: 16px;
@@ -61,7 +69,7 @@ button:hover {
     background-color: #333;
     color: white;
     border: none;
-    padding: 20px 40px; /* Робимо прямокутні кнопки */
+    padding: 20px 40px; /* Прямокутні кнопки */
     cursor: pointer;
     font-size: 20px;
     border-radius: 10px;
