@@ -1,42 +1,66 @@
-let attempts = 0;
-let timeout = 1;
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+}
 
-// Обробка натискання клавіші Enter
-document.getElementById('codeInput').addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        const codeInput = document.getElementById('codeInput').value;
-        const serverOutput = document.getElementById('serverOutput');
-        
-        // Показати повідомлення про початок роботи сервера
-        if (serverOutput.innerHTML === "") {
-            serverOutput.innerHTML += "<span style='color: red; text-decoration: underline;'>Server:</span> Starting...\n";
-            setTimeout(() => {
-                serverOutput.innerHTML += "<span style='color: red; text-decoration: underline;'>Server:</span> Identifying user...\n";
-                setTimeout(() => {
-                    serverOutput.innerHTML += "<span style='color: red; text-decoration: underline;'>Server:</span> Error, enter code:\n";
-                }, 1000);
-            }, 1000);
-        }
-        
-        // Перевірка коду
-        if (codeInput === '3307' && attempts < 3) {
-            serverOutput.innerHTML += "<span style='color: red;'>Server: Access granted</span><br>";
-            setTimeout(function() {
-                window.location.href = 'welcome.html';
-            }, 1000);
-        } else if (attempts >= 3) {
-            serverOutput.innerHTML += "<span style='color: red;'>Server: Too many failed attempts. Try again later.</span><br>";
-            setTimeout(function() {
-                window.location.href = 'error.html'; // Error page
-            }, 3000);
-        } else {
-            if (codeInput !== '3307') {
-                attempts++;
-                serverOutput.innerHTML += "<span style='color: red;'>Server: Invalid code, try again...</span><br>";
-            }
-        }
+.terminal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    padding: 10px;
+}
 
-        // Очищення поля вводу після натискання Enter
-        document.getElementById('codeInput').value = '';
-    }
-});
+#serverOutput {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#codeInput {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    background: black;
+    color: white;
+    border: 1px solid white;
+    font-size: 1.2em;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+input[type="text"], input[type="password"] {
+    background: black;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 10px 0;
+    width: 250px;
+    font-size: 1.2em;
+}
+
+button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.error {
+    color: red;
+    margin-top: 10px;
+        }
