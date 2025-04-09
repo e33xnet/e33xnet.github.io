@@ -7,16 +7,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="music-container">
-        <h1>Welcome</h1>
-        <audio controls>
-            <source src="" id="audioPlayer" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-        <input type="file" id="audioFileInput" />
-        <p>Upload your audio file</p>
-    </div>
+    <div class="container">
+        <h1>Welcome, Splyachyy</h1>
 
-    <script src="app2.js"></script>
+        <div class="media-section">
+            <!-- Аудіо програвач -->
+            <div class="audio-player">
+                <button class="hex-button" id="audioButton">1</button>
+                <input type="file" id="audioUploadBtn" accept="audio/*" style="display:none;">
+                <audio id="audioPlayer" controls style="display:none;">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <!-- Відео програвач -->
+            <div class="video-player">
+                <button class="hex-button" id="videoButton">2</button>
+                <input type="file" id="videoUploadBtn" accept="video/*" style="display:none;">
+                <video id="videoPlayer" controls style="display:none;">
+                    Your browser does not support the video element.
+                </video>
+            </div>
+        </div>
+
+        <script src="app3.js"></script> <!-- Підключення скрипта для відео -->
+        <script src="app4.js"></script> <!-- Підключення скрипта для аудіо -->
+    </div>
 </body>
 </html>
