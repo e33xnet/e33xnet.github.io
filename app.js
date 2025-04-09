@@ -8,6 +8,8 @@ document.getElementById('loginBtn').addEventListener('click', function() {
         document.getElementById('mediaSection').style.display = 'block'; // Показуємо медіа секцію
     } else {
         errorMessage.textContent = "Login failed"; // Показуємо повідомлення про помилку
+        document.getElementById('username').value = ''; // Очищаємо поле введення
+        document.getElementById('password').value = ''; // Очищаємо поле введення
     }
 });
 
