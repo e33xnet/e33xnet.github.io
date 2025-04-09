@@ -2,43 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div id="loginForm">
-            <h1>Login</h1>
-            <input type="text" id="username" placeholder="Username" />
-            <input type="password" id="password" placeholder="Password" />
-            <button id="loginBtn">Login</button>
-            <div id="errorMessage"></div> <!-- Повідомлення про помилку -->
-        </div>
-
-        <div id="mediaSection" class="media-section" style="display: none;">
-            <!-- Шестикутники для медіа -->
-            <div class="hex-button" id="audioBtn">
-                1
-            </div>
-            <div class="hex-button" id="videoBtn">
-                2
-            </div>
-            <div id="audioPlayer" style="display: none;">
-                <audio controls>
-                    <source id="audioSource" src="" type="audio/mp3">
-                </audio>
-                <input type="file" id="audioUpload" accept="audio/*">
-            </div>
-            <div id="videoPlayer" style="display: none;">
-                <video controls>
-                    <source id="videoSource" src="" type="video/mp4">
-                </video>
-                <input type="file" id="videoUpload" accept="video/*">
-            </div>
-        </div>
+    <div class="login-container">
+        <h1>Login</h1>
+        <input type="text" id="username" placeholder="Login" autocomplete="off">
+        <input type="password" id="password" placeholder="Password" autocomplete="off">
+        <button id="loginBtn">Login</button>
+        <div id="error-msg">Login failed</div>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>
