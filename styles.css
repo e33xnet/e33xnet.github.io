@@ -9,8 +9,8 @@ body {
 }
 
 h1 {
-    font-size: 2em;
-    margin: 20px;
+    font-size: 2.5em;
+    margin-top: 50px;
 }
 
 /* Контейнер для входу */
@@ -54,7 +54,61 @@ h1 {
     margin-top: 10px;
 }
 
-/* Контейнер для музики */
-.music-container {
+/* Стилі для шестикуників */
+.media-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.hexagon {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+    top: -30px;
+    border-bottom: 30px solid #333;
+}
+
+.hexagon:after {
+    bottom: -30px;
+    border-top: 30px solid #333;
+}
+
+.media-text {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.media-player {
+    display: none;
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Стилі для контенту після входу */
+.container {
     margin-top: 50px;
 }
