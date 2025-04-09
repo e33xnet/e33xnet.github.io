@@ -1,54 +1,114 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: monospace;
-}
-
+/* Загальні стилі */
 body {
-  background-color: black;
-  color: white;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+h1 {
+    font-size: 2.5em;
+    margin-top: 50px;
+}
+
+/* Контейнер для входу */
 .login-container {
-  background-color: black;
-  border: 1px solid white;
-  padding: 30px;
-  width: 90%;
-  max-width: 300px;
-  text-align: center;
+    margin-top: 100px;
 }
 
-.login-container h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: white;
+/* Стилі для полів вводу */
+.input-field {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
 }
 
-.login-container input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  background: black;
-  border: 1px solid white;
-  color: white;
-  outline: none;
+/* Стиль кнопки */
+.button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-.login-container button {
-  padding: 10px 20px;
-  background-color: black;
-  color: white;
-  border: 1px solid white;
-  cursor: pointer;
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-#error-msg {
-  display: none;
-  color: red;
-  margin-top: 10px;
+.button:active {
+    background-color: rgba(255, 255, 255, 0.4);
 }
+
+/* Стиль для повідомлення про помилку */
+.error-msg {
+    color: red;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Стилі для шестикуників */
+.media-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.hexagon {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.hexagon:before {
+    top: -30px;
+    border-bottom: 30px solid #333;
+}
+
+.hexagon:after {
+    bottom: -30px;
+    border-top: 30px solid #333;
+}
+
+.media-text {
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.media-player {
+    display: none;
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+/* Стилі для контенту після входу */
+.container {
+    margin-top: 50px;
+  }
