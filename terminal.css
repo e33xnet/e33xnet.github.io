@@ -1,0 +1,33 @@
+body {
+    font-family: Consolas, monospace;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.terminal {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#serverOutput {
+    white-space: pre-wrap;
+    font-size: 16px;
+    color: #00ff00;
+    margin-bottom: 10px;
+}
+
+#codeInput {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+}
