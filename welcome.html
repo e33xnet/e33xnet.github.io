@@ -7,23 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="container">
-        <!-- Форма входу -->
-        <div id="loginForm">
-            <h1>Login</h1>
-            <input type="text" id="username" placeholder="Enter your username" required>
-            <input type="password" id="password" placeholder="Enter your password" required>
-            <button id="loginBtn">Login</button>
-            <p id="errorMessage" style="color: red; display: none;">Login failed. Please try again.</p>
-        </div>
-
-        <!-- Медіа секція -->
+        <h1>Welcome, Splyachyy</h1>
+        
         <div class="media-section">
             <!-- Аудіо програвач -->
             <div class="audio-player">
-                <button class="hex-button" id="audioButton">1</button>
-                <input type="file" id="audioUploadBtn" accept="audio/*" style="display:none;">
+                <button class="hex-button">1</button>
+                <input type="file" id="audioUploadBtn" accept="audio/*">
                 <audio id="audioPlayer" controls style="display:none;">
                     Your browser does not support the audio element.
                 </audio>
@@ -31,17 +22,15 @@
 
             <!-- Відео програвач -->
             <div class="video-player">
-                <button class="hex-button" id="videoButton">2</button>
-                <input type="file" id="videoUploadBtn" accept="video/*" style="display:none;">
+                <button class="hex-button">2</button>
+                <input type="file" id="videoUploadBtn" accept="video/*">
                 <video id="videoPlayer" controls style="display:none;">
                     Your browser does not support the video element.
                 </video>
             </div>
         </div>
 
+        <script src="app3.js"></script> <!-- Підключення скрипта для відео -->
     </div>
-
-    <script src="app3.js"></script> <!-- Підключення скрипта для відео -->
-    <script src="app4.js"></script> <!-- Підключення скрипта для аудіо -->
 </body>
 </html>
