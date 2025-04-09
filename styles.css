@@ -19,7 +19,7 @@ body {
 /* Стиль для форми входу */
 #loginForm {
     padding: 30px;
-    background-color: #333;
+    background-color: #222; /* Тепер вікно темніше, не сіре */
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -59,6 +59,13 @@ button {
 
 button:hover {
     background-color: #888;
+}
+
+/* Стилі для повідомлення про помилку */
+#errorMessage {
+    color: red;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 /* Стилі для медіа секції */
@@ -113,4 +120,4 @@ button:hover {
     audio, video {
         width: 100%;
     }
-    }
+}
