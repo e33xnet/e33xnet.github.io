@@ -1,48 +1,38 @@
-const output = document.getElementById("serverOutput");
-const input = document.getElementById("codeInput");
-
-let stage = 0;
+const output = document.getElementById('serverOutput');
+const input = document.getElementById('codeInput');
 let attempts = 0;
-let blocked = false;
-let blockTime = 0;
+let lockedUntil = null;
 
-const correctCode = "3307";
+const messages = [
+    "Server: Starting up...",
+    "Server: Identifying user...",
+    "Server: Error, enter code:"
+];
 
-function serverMessage(text, delay = 1000) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            output.innerHTML += `Server: ${text}_\n`;
-            resolve();
-        }, delay);
-    });
+let index = 0;
+
+function printNextMessage() {
+    if (index < messages.length) {
+        output.innerText += messages[index] + "\n";
+        index++;
+        setTimeout(printNextMessage, 1000);
+    }
 }
+printNextMessage();
 
-async function startSequence() {
-    await serverMessage("Initializing...");
-    await serverMessage("User identification...");
-    await serverMessage("Error. Enter code:");
-}
+input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        if (lockedUntil && Date.now() < lockedUntil) return;
 
-startSequence();
-
-input.addEventListener("keydown", function (e) {
-    if (e.key === "Enter" && !blocked) {
-        const value = input.value.trim();
-        input.value = "";
-
-        if (value === correctCode) {
-            output.innerHTML += "Server: Access granted_\n";
-            // Тут можна вставити перехід до реального контенту
+        if (input.value === "3307") {
+            window.location.href = "granted.html"; // або інша сторінка доступу
         } else {
             attempts++;
-            output.innerHTML += "Server: Invalid code_\n";
-            if (attempts >= 3) {
-                if (blockTime === 0) blockTime = 60;
-                else blockTime = 3600;
+            input.value = "";
+            output.innerText += "Server: Incorrect code\n";
 
-                blocked = true;
-                output.innerHTML += "Server: Unauthorized user. Access error_\n";
-
+            if (attempts === 3) {
+                output.innerText += "Server: Unknown user, access denied\n";
                 setTimeout(() => {
                     window.location.href = "error.html";
                 }, 4000);
