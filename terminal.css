@@ -1,25 +1,21 @@
 body {
     background-color: black;
-    color: red;
+    color: white;
     font-family: monospace;
     margin: 0;
-    height: 100vh;
-    overflow: hidden;
+    padding: 0;
 }
 
 .terminal {
+    width: 100vw;
+    height: 100vh;
     padding: 20px;
     box-sizing: border-box;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 }
 
 #serverOutput {
     white-space: pre-line;
-    line-height: 1.5;
-    font-size: 16px;
+    margin-bottom: 10px;
     color: red;
 }
 
@@ -28,7 +24,7 @@ body {
     padding: 10px;
     font-size: 16px;
     background: black;
+    color: white;
     border: 1px solid red;
-    color: red;
     outline: none;
 }
